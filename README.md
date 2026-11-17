@@ -86,8 +86,9 @@ en premier ; les autres restent disponibles dans une liste repliable et via les 
 Les liens sont aussi disponibles dans chaque fiche projet, sous « Code source ».
 LEXILUX n'a pas de dépôt public : le prototype a été réalisé en équipe pendant le hackathon.
 
-La section Compétences privilégie les outils mis en pratique et les réalisations qui les
-illustrent, plutôt que des jauges d'auto-évaluation.
+La section Compétences reste volontairement courte : **4 cartes et 13 compétences**,
+celles qui sont réellement pratiquées en formation, en projet ou en alternance. Elle ne
+cherche pas à lister tout ce qui a été aperçu, et n'affiche pas de jauges d'auto-évaluation.
 
 ### Lecture du référentiel BTS SIO
 

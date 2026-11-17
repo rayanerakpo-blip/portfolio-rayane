@@ -404,18 +404,6 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .skill-proof strong { color: var(--text-soft); }
 
-.skills__extra {
-  display: grid; grid-template-columns: minmax(0, 760px); justify-content: center;
-  gap: 18px; margin-top: 18px;
-}
-.extra-card {
-  padding: 22px 24px; border: 1px dashed var(--border-strong); border-radius: var(--radius);
-  background: var(--surface);
-}
-.extra-card h4 { display: flex; align-items: center; gap: 9px; font-size: 14.5px; margin-bottom: 4px; }
-.extra-card h4 .i { width: 18px; height: 18px; color: var(--accent-2); }
-.extra-card .chips { margin-top: 12px; }
-
 .skills__note {
   margin-top: 16px; font-size: 12.5px; line-height: 1.55;
   color: var(--muted); text-align: right;
@@ -861,11 +849,10 @@ h1, h2, h3, h4, p { margin: 0; }
   .veille { grid-template-columns: 1fr; }
   .veille__aside { position: static; }
   .veille__toc { grid-template-columns: 1fr 1fr; }
-  .skills__extra { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 820px) {
-  .skills, .skills__extra, .edu { grid-template-columns: 1fr; }
+  .skills, .edu { grid-template-columns: 1fr; }
   .tl-grid { grid-template-columns: 1fr; }
   .v-grid, .v-compare, .v-sources { grid-template-columns: 1fr; }
   .projects { grid-template-columns: 1fr; }
