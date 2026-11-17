@@ -1,0 +1,8 @@
+# Sorties générées par l'agrégateur de veille
+veille/data/*.json
+veille/digests/*.md
+!veille/digests/.gitkeep
+
+# Système
+.DS_Store
+Thumbs.db

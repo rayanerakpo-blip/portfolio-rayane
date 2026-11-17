@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayane AKPO — Étudiant BTS SIO SLAM & développeur web | Portfolio</title>
+  <meta name="description" content="Portfolio de Rayane AKPO, étudiant en BTS SIO option SLAM et alternant à l'Institut Gustave Roussy. Développement web, Java/Spring, React, UX, tests utilisateurs, IA générative et veille technologique.">
+  <meta name="author" content="Rayane AKPO">
+  <meta name="theme-color" content="#070b14">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rayane AKPO — Étudiant BTS SIO SLAM & développeur web">
+  <meta property="og:description" content="Projets web, Java/Spring, React, UX, tests utilisateurs, IA générative et veille sur l'architecture logicielle à l'ère du cloud et de l'IA.">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23070b14'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='46' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3ERA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rayane AKPO",
+    "jobTitle": "Étudiant en BTS SIO option SLAM — Alternant développeur web & accompagnement numérique",
+    "email": "mailto:rayanerakpo@gmail.com",
+    "telephone": "+33759574907",
+    "address": { "@type": "PostalAddress", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Ingetis Paris" },
+    "worksFor": { "@type": "Organization", "name": "Institut Gustave Roussy" },
+    "sameAs": ["https://github.com/rayanerakpo-blip"],
+    "knowsAbout": [
+      "PHP", "MySQL", "Java", "Spring Boot", "React", "TypeScript", "Next.js", "Python",
+      "UX design", "Figma", "Tests utilisateurs", "Documentation technique",
+      "IA générative", "Prompt engineering", "RAG", "Playwright", "Cypress", "Selenium", "GitLab CI"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ===================== SPRITE SVG ===================== -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M13.5 4l-3 16"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-test" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6.5L5.5 17a2.5 2.5 0 0 0 2.2 3.5h8.6a2.5 2.5 0 0 0 2.2-3.5L14 9.5V3"/><path d="m8 15 2.2 2.2L15 12.5"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .8-7.9A6 6 0 0 0 6.2 9.5 4.2 4.2 0 0 0 7 18Z"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 3.5a3 3 0 0 0-3 3v.3A3 3 0 0 0 5 12a3 3 0 0 0 1.5 5.2v.3a3 3 0 0 0 6 0V3.5a3 3 0 0 0-3 0Z"/><path d="M14.5 3.5a3 3 0 0 1 3 3v.3A3 3 0 0 1 19 12a3 3 0 0 1-1.5 5.2v.3a3 3 0 0 1-6 0"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.6 3.1 7.9 7.5 9 4.4-1.1 7.5-4.4 7.5-9V6L12 3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5L17 13l4 1.5v3a2.5 2.5 0 0 1-2.8 2.5A17 17 0 0 1 4 5.8 2.5 2.5 0 0 1 6.5 3Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M8.5 6H15a3 3 0 0 1 3 3"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z"/><path d="M18.5 15.5l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9.9-2.1Z"/></symbol>
+  </svg>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="haut">
+    <div class="wrap header__inner">
+      <a class="brand" href="#haut">
+        <span class="brand__mark">RA</span>
+        <span class="brand__text">Rayane <strong>AKPO</strong></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#apropos">À propos</a>
+        <a href="#experience">Expérience</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#bts-sio">BTS SIO</a>
+        <a href="#veille">Veille</a>
+        <a href="#formation">Formation</a>
+        <a class="nav__cta" href="#contact">Me contacter</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème" title="Changer de thème">
+          <svg class="i i--sun"><use href="#i-sun"/></svg>
+          <svg class="i i--moon"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+          <svg class="i i--open"><use href="#i-menu"/></svg>
+          <svg class="i i--close"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__copy reveal">
+          <p class="badge">
+            <span class="dot"></span>
+            BTS SIO · option SLAM · alternance à l'Institut Gustave Roussy
+          </p>
+          <h1>
+            Rayane <span class="grad">AKPO</span>
+          </h1>
+          <p class="hero__role">Étudiant en BTS SIO <strong>SLAM</strong> — je construis des applications web et j'accompagne les utilisateurs, du besoin métier à la mise en ligne.</p>
+          <p class="hero__lead">
+            PHP/MySQL, Java/Spring et React. Au quotidien : analyse des besoins, prototypage Figma,
+            tests utilisateurs et automatisation des tests de recette (Playwright, Cypress, Selenium),
+            avec une veille sur l'architecture logicielle à l'ère du cloud et de l'IA.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projets">
+              Voir mes projets
+              <svg class="i"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="assets/CV_Rayane_AKPO.pdf" target="_blank" rel="noopener">
+              Télécharger le CV
+            </a>
+          </div>
+
+          <p class="hero__goal">
+            <svg class="i"><use href="#i-check"/></svg>
+            Objectif : diplôme BTS SIO · 2027
+          </p>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-card__bar">
+              <span></span><span></span><span></span>
+              <em>profil.js</em>
+            </div>
+            <pre><code><span class="c-key">const</span> <span class="c-var">profil</span> = {
+  <span class="c-prop">nom</span>: <span class="c-str">"Rayane AKPO"</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">"PHP"</span>, <span class="c-str">"Java"</span>, <span class="c-str">"React"</span>],
+  <span class="c-prop">ux</span>: [<span class="c-str">"Figma"</span>, <span class="c-str">"Tests utilisateurs"</span>],
+  <span class="c-prop">ia</span>: [<span class="c-str">"Claude"</span>, <span class="c-str">"Prompt engineering"</span>],
+  <span class="c-prop">tests</span>: [<span class="c-str">"Playwright"</span>, <span class="c-str">"Cypress"</span>, <span class="c-str">"Selenium"</span>]
+};</code></pre>
+            <div class="code-card__foot">
+              <span class="pulse"></span> Disponible pour échanger
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <ul class="stats reveal">
+          <li><strong data-count="6">6</strong><span>projets majeurs</span></li>
+          <li><strong data-count="3">3</strong><span>blocs de compétences</span></li>
+          <li><strong data-count="1">1</strong><span>application en ligne</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== À PROPOS ===================== -->
+    <section class="section" id="apropos">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">01 — Profil</p>
+          <h2>Un développeur qui aime comprendre <span class="grad">ce qu'il y a sous le capot</span></h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text reveal">
+            <p>
+              Né et formé au Togo, j'ai commencé par une licence en informatique, réseaux et
+              télécommunications avant de rejoindre la France pour me spécialiser dans le développement.
+            </p>
+            <p>
+              Ce que j'aime, c'est le moment où un besoin métier un peu flou devient un modèle de données clair,
+              puis une application qu'on peut réellement utiliser. J'ai construit des projets de bout en bout —
+              de la conception Merise au déploiement — en PHP/MySQL, puis en Java/Spring et React pour aller
+              vers des architectures plus modernes.
+            </p>
+            <p>
+              Ce qui me tient à cœur, c'est de rendre les tests et la recette plus fiables et plus rapides —
+              un sujet que j'explore aussi dans ma veille sur l'architecture logicielle avec le cloud et l'IA.
+            </p>
+            <p>
+              Au-delà du code, j'aime le moment où l'on comprend vraiment l'usage : observer, questionner,
+              prototyper sur Figma, tester avec de vrais utilisateurs et transformer les retours en
+              améliorations concrètes. C'est ce qui m'a amené à l'accessibilité, à la documentation
+              et à l'IA générative comme outil d'accompagnement.
+            </p>
+
+            <div class="about__values">
+              <span><svg class="i"><use href="#i-check"/></svg> Rigueur</span>
+              <span><svg class="i"><use href="#i-check"/></svg> Autonomie</span>
+              <span><svg class="i"><use href="#i-check"/></svg> Sens pédagogique</span>
+              <span><svg class="i"><use href="#i-check"/></svg> Esprit de synthèse</span>
+              <span><svg class="i"><use href="#i-check"/></svg> Polyvalence</span>
+              <span><svg class="i"><use href="#i-check"/></svg> Curiosité technique</span>
+            </div>
+            <p class="about__hobbies">En dehors du code : football et jeux vidéo.</p>
+          </div>
+
+          <aside class="about__card reveal">
+            <div class="about__id">
+              <span class="avatar">RA</span>
+              <div>
+                <strong>Rayane AKPO</strong>
+                <span>Étudiant BTS SIO SLAM · développeur web</span>
+              </div>
+            </div>
+            <dl class="facts">
+              <div><dt>Localisation</dt><dd>Île-de-France</dd></div>
+              <div><dt>Formation</dt><dd>BTS SIO · SLAM · 2<sup>e</sup> année</dd></div>
+              <div><dt>École</dt><dd>Ingetis Paris</dd></div>
+              <div><dt>Entreprise</dt><dd>Institut Gustave Roussy</dd></div>
+              <div><dt>Rythme</dt><dd>3/5 jours en entreprise</dd></div>
+              <div><dt>Langues</dt><dd>Français · Anglais (Niveau B2)</dd></div>
+              <div><dt>Objectif</dt><dd>Diplôme BTS SIO · 2027</dd></div>
+            </dl>
+            <a class="btn btn--ghost btn--full" href="#contact">
+              Discutons
+              <svg class="i"><use href="#i-arrow"/></svg>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPÉRIENCE ===================== -->
+    <section class="section section--alt" id="experience">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">02 — Parcours</p>
+          <h2>Expérience <span class="grad">professionnelle</span></h2>
+        </header>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-marker tl-marker--live" aria-hidden="true"></div>
+            <div class="tl-card tl-card--featured">
+              <div class="tl-card__top">
+                <div>
+                  <p class="tl-period">2026 — 2027 · Alternance</p>
+                  <h3>Alternant développeur — automatisation des tests</h3>
+                  <p class="tl-org">Institut Gustave Roussy · Villejuif</p>
+                </div>
+                <span class="pill pill--live">En cours</span>
+              </div>
+
+              <p class="tl-desc">
+                Au sein d'une équipe qui développe des applications <strong>Java (back-end)</strong> et
+                <strong>React (front-end)</strong>, je travaille sur la fiabilité des livraisons : remplacer
+                une recette manuelle longue et difficile à reproduire par des tests automatisés intégrés à la CI.
+              </p>
+
+              <div class="tl-grid">
+                <div class="mini">
+                  <h4>Benchmark d'outils</h4>
+                  <p>Comparaison de <strong>Playwright</strong>, <strong>Cypress</strong> et <strong>Selenium</strong>
+                  sur 9 critères pondérés : compatibilité Java/React, intégration GitLab CI, preuves exploitables
+                  dans un PV de recette, sécurité, stabilité, prise en main, coût.</p>
+                </div>
+                <div class="mini">
+                  <h4>Proof of concept</h4>
+                  <p>Même scénario rejoué avec chaque outil sur la préproduction : connexion, création d'une
+                  donnée fictive, vérification de l'affichage. Mesure du temps d'installation, d'écriture,
+                  d'exécution et du taux de réussite sur 10 passes.</p>
+                </div>
+                <div class="mini">
+                  <h4>Contexte applicatif</h4>
+                  <p>DashboardChimio : interface d'analyse adossée à une API qui interroge <strong>SIMBAD</strong>
+                  et <strong>DxCare</strong>. Suivi des tickets dans <strong>Asana</strong>, pipelines
+                  <strong>GitLab CI</strong> internes, préproduction avec données fictives.</p>
+                </div>
+                <div class="mini">
+                  <h4>Veille technologique</h4>
+                  <p>Note de veille, sources et synthèse : <a href="#veille">voir la section Veille</a>.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-card tl-card--compact">
+              <div class="tl-card__top">
+                <div>
+                  <p class="tl-period">Juin — Août 2026 · Stage</p>
+                  <h3>Stagiaire développeur web &amp; UX/UI — TensionWatch</h3>
+                  <p class="tl-org">Global Needs Institute · Saint-Étienne · PHP 8 / MySQL</p>
+                </div>
+                <span class="pill">Livré</span>
+              </div>
+              <p class="tl-desc">
+                Analyse des besoins, conception des parcours, maquettes Figma, développement des interfaces,
+                tests fonctionnels et documentation technique. Application conçue, développée et mise en ligne.
+                <a class="link" href="#projets">Voir l'étude de cas <svg class="i"><use href="#i-arrow"/></svg></a>
+              </p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-card__top">
+                <div>
+                  <p class="tl-period">2023 — 2024</p>
+                  <h3>Employé polyvalent</h3>
+                  <p class="tl-org">Supérette FERMAF · Lomé, Togo</p>
+                </div>
+              </div>
+              <p class="tl-desc">
+                Accueil et conseil client, suivi des commandes, encaissement, organisation des stocks et
+                approvisionnements. Une première expérience du travail en équipe et de la rigueur au quotidien.
+              </p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-card tl-card--compact">
+              <div class="tl-card__top">
+                <div>
+                  <p class="tl-period">2021 — 2023</p>
+                  <h3>Soutien scolaire &amp; bénévolat</h3>
+                  <p class="tl-org">Cours particuliers · Événement caritatif · Lomé</p>
+                </div>
+              </div>
+              <p class="tl-desc">
+                Aide aux devoirs pour des collégiens, adaptation pédagogique, suivi des progrès. Participation
+                à la collecte de fonds et à l'organisation d'un événement de quartier.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPÉTENCES ===================== -->
+    <section class="section" id="competences">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">03 — Savoir-faire</p>
+          <h2>Compétences <span class="grad">techniques</span></h2>
+          <p class="section__lead">Ce que j'utilise régulièrement, ce que j'apprends, et ce que je sais expliquer.</p>
+        </header>
+
+        <div class="skills">
+          <article class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-ico skill-ico--cyan"><svg class="i"><use href="#i-code"/></svg></span>
+              <h3>Développement web</h3>
+            </div>
+            <ul class="chips skill-chips">
+              <li>PHP 8 / MVC</li><li>Java / Spring Boot</li><li>React / TypeScript</li>
+              <li>HTML / CSS / JavaScript</li><li>API REST / JWT</li>
+            </ul>
+            <p class="skill-proof"><strong>En pratique :</strong> TensionWatch (PHP puis Spring/React) et Ferme Togo (PHP puis Java/PWA).</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-ico skill-ico--violet"><svg class="i"><use href="#i-layers"/></svg></span>
+              <h3>Données &amp; conception</h3>
+            </div>
+            <ul class="chips skill-chips">
+              <li>MySQL / MariaDB</li><li>PDO / requêtes préparées</li><li>Merise</li>
+              <li>UML</li><li>PostgreSQL</li><li>MongoDB / Qdrant</li>
+            </ul>
+            <p class="skill-proof"><strong>En pratique :</strong> modélisation et gestion des données sur TensionWatch et les applications métier.</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-ico skill-ico--green"><svg class="i"><use href="#i-test"/></svg></span>
+              <h3>Tests &amp; livraison</h3>
+            </div>
+            <ul class="chips skill-chips">
+              <li>Playwright</li><li>Cypress</li><li>Selenium</li><li>JUnit / Vitest</li>
+              <li>GitLab CI</li><li>Docker / Maven</li>
+            </ul>
+            <p class="skill-proof"><strong>En pratique :</strong> benchmark d’outils, tests de recette et automatisation en alternance à l’IGR.</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-ico skill-ico--rose"><svg class="i"><use href="#i-spark"/></svg></span>
+              <h3>UX, accompagnement &amp; IA</h3>
+            </div>
+            <ul class="chips skill-chips">
+              <li>Analyse des besoins</li><li>Figma</li><li>Tests utilisateurs</li>
+              <li>Documentation</li><li>Évaluation IA / RAG</li><li>Accessibilité</li>
+            </ul>
+            <p class="skill-proof"><strong>En pratique :</strong> parcours et maquettes Figma, tests de TensionWatch et évaluation de LEXILUX en hackathon.</p>
+          </article>
+        </div>
+
+        <div class="skills__extra">
+          <div class="extra-card reveal">
+            <h4><svg class="i"><use href="#i-spark"/></svg> En cours d'apprentissage</h4>
+            <ul class="chips">
+              <li>Architecture cloud-native</li><li>Observabilité</li><li>Kubernetes</li>
+              <li>Sécurité applicative</li><li>IA appliquée aux tests</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="skills__note">
+          Les niveaux et les réalisations correspondantes sont détaillés dans la section
+          <a href="#bts-sio">BTS SIO</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== PROJETS ===================== -->
+    <section class="section section--alt" id="projets">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">04 — Réalisations</p>
+          <h2>Projets <span class="grad">sélectionnés</span></h2>
+          <p class="section__lead">
+            Trois réalisations à découvrir en premier. Les autres projets restent accessibles juste en dessous.
+          </p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrer les projets">
+          <button class="filter is-active" data-filter="all" type="button">Tous</button>
+          <button class="filter" data-filter="web" type="button">Web PHP</button>
+          <button class="filter" data-filter="java" type="button">Java / React</button>
+          <button class="filter" data-filter="data" type="button">Données</button>
+          <button class="filter" data-filter="ia" type="button">IA</button>
+          <button class="filter" data-filter="bts" type="button">BTS</button>
+        </div>
+
+        <div class="projects" id="projects-grid">
+
+          <!-- TensionWatch -->
+          <article class="project reveal" data-tags="web bts java">
+            <div class="project__preview">
+              <img class="project__shot" src="assets/img/tw-dashboard.jpg" width="980" height="840"
+                   alt="Tableau de bord TensionWatch : mesures de tension d'une patiente de démonstration, moyenne, tension du jour et dernières mesures" loading="lazy">
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="pill pill--accent">Projet de stage · 2 versions</span>
+              </div>
+              <h3>TensionWatch</h3>
+              <p class="project__pitch">Suivi des mesures, traitements, alertes et historique : une première version PHP/MySQL, puis une API Spring Boot et un front React.</p>
+              <ul class="chips chips--sm">
+                <li>PHP 8</li><li>MySQL</li><li>Spring Boot</li><li>React 19</li><li>JWT</li>
+              </ul>
+              <div class="project__actions">
+                <a class="link" href="https://tensionwatch.wuaze.com" target="_blank" rel="noopener">
+                  Voir la démo <svg class="i"><use href="#i-external"/></svg>
+                </a>
+                <button class="link link--btn" data-project="tensionwatch" type="button">
+                  Étude de cas <svg class="i"><use href="#i-arrow"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- LEXILUX -->
+          <article class="project reveal" data-tags="ia data bts">
+            <div class="project__preview project__preview--text" aria-hidden="true">
+              <div class="project__cover">
+                <span class="project__cover-kicker">Hackathon · Assemblée nationale 2026</span>
+                <strong>LEXILUX</strong>
+                <span class="project__cover-sub">Assistant juridique IA</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="pill pill--accent">Hackathon · 2026</span>
+              </div>
+              <h3>LEXILUX</h3>
+              <p class="project__pitch">Ma contribution au hackathon de l’Assemblée nationale : tester les parcours et évaluer l’expérience d’un assistant juridique fondé sur le RAG.</p>
+              <ul class="chips chips--sm">
+                <li>IA générative</li><li>RAG</li><li>Tests utilisateurs</li><li>UX</li><li>Évaluation</li>
+              </ul>
+              <div class="project__actions">
+                <button class="link link--btn" data-project="lexilux" type="button">
+                  Étude de cas <svg class="i"><use href="#i-arrow"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fair'repair -->
+          <article class="project reveal" data-tags="web bts data">
+            <div class="project__preview">
+              <img class="project__shot" src="assets/img/fairrepair-home.jpg" width="980" height="840"
+                   alt="Page d'accueil de Fair'repair : recherche de réparateurs de vélos et services proposés" loading="lazy">
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <span class="pill">Plateforme</span>
+              </div>
+              <h3>Fair'repair</h3>
+              <p class="project__pitch">Une plateforme PHP/MySQL avec trois espaces utilisateurs et une carte OpenStreetMap pour trouver des réparateurs.</p>
+              <ul class="chips chips--sm">
+                <li>PHP 8.2</li><li>MySQL</li><li>OpenStreetMap</li><li>Chart.js</li><li>RGPD</li>
+              </ul>
+              <div class="project__actions">
+                <button class="link link--btn" data-project="fairrepair" type="button">
+                  Étude de cas <svg class="i"><use href="#i-arrow"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <details class="project-archive reveal" id="project-archive">
+          <summary class="project-archive__summary">
+            <span>Voir les autres projets</span>
+            <span class="project-archive__count">3 études de cas</span>
+          </summary>
+          <div class="projects project-archive__grid">
+            <!-- Ferme -->
+            <article class="project reveal" data-tags="web data java">
+              <div class="project__preview">
+                <img class="project__shot" src="assets/img/ferme-dashboard.jpg" width="980" height="820"
+                     alt="Tableau de bord de Ferme Togo : cultures en cours, tâches, parcelles et indicateurs financiers" loading="lazy">
+              </div>
+              <div class="project__body">
+                <div class="project__top">
+                  <span class="pill">Application métier · 3 versions</span>
+                </div>
+                <h3>Ferme Togo</h3>
+                <p class="project__pitch">Piloter une ferme de 17 hectares — trois déclinaisons : PHP MVC, version allégée, Java/PWA.</p>
+                <ul class="chips chips--sm">
+                  <li>PHP 8.2</li><li>MySQL</li><li>Java 25</li><li>PWA</li><li>i18n</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="link link--btn" data-project="ferme" type="button">
+                    Étude de cas <svg class="i"><use href="#i-arrow"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- TOGO -->
+            <article class="project reveal" data-tags="web data">
+              <div class="project__preview">
+                <img class="project__shot" src="assets/img/togo-home.jpg" width="980" height="840"
+                     alt="Page d'accueil du Portail du Togo : recherche de démarches et accès aux services publics" loading="lazy">
+              </div>
+              <div class="project__body">
+                <div class="project__top">
+                  <span class="pill">Portail public</span>
+                </div>
+                <h3>Portail du Togo</h3>
+                <p class="project__pitch">Un guichet unique pour les démarches administratives togolaises.</p>
+                <ul class="chips chips--sm">
+                  <li>PHP 8</li><li>MySQL</li><li>AJAX</li><li>JSON-LD</li><li>Accessibilité</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="link link--btn" data-project="togo" type="button">
+                    Étude de cas <svg class="i"><use href="#i-arrow"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- FormaSat -->
+            <article class="project reveal" data-tags="web bts data">
+              <div class="project__preview">
+                <img class="project__shot" src="assets/img/formasat-admin.jpg" width="980" height="820"
+                     alt="Tableau de bord administrateur de FormaSat : statistiques et gestion des promotions, professeurs et modules" loading="lazy">
+              </div>
+              <div class="project__body">
+                <div class="project__top">
+                  <span class="pill">Évaluation</span>
+                </div>
+                <h3>FormaSat</h3>
+                <p class="project__pitch">Évaluer la qualité des modules de formation, du point de vue étudiant.</p>
+                <ul class="chips chips--sm">
+                  <li>PHP 8</li><li>MySQL</li><li>Triggers</li><li>Dashboard</li>
+                </ul>
+                <div class="project__actions">
+                  <button class="link link--btn" data-project="formasat" type="button">
+                    Étude de cas <svg class="i"><use href="#i-arrow"/></svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </details>
+
+        <p class="projects__note reveal">
+          Également : un générateur de CV en ligne (personnalisation dynamique, interface accessible,
+          8 tables), des TP de gestion d'étudiants en C#/.NET (POO, Docker) et en VB.NET,
+          un générateur de QR codes en Python, et un lab Docker PHP/Apache/MySQL.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== BTS SIO ===================== -->
+    <section class="section" id="bts-sio">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">05 — Référentiel BTS SIO</p>
+          <h2>Ce que je sais faire, <span class="grad">compétence par compétence</span></h2>
+          <p class="section__lead">
+            Lecture honnête du référentiel du BTS SIO option SLAM (arrêté du 29 avril 2019) :
+            14 compétences professionnelles réparties sur 3 blocs. Chaque niveau est adossé à une
+            réalisation ou à une situation vécue — pas à une note inventée.
+          </p>
+        </header>
+
+        <div class="bts-legend reveal" aria-label="Légende des niveaux">
+          <span class="bts-level bts-level--project">Pratiqué en projet</span>
+          <span class="bts-level bts-level--work">Mobilisé en stage / alternance</span>
+          <span class="bts-level bts-level--notions">Notions à consolider</span>
+        </div>
+
+        <div class="bts-blocks">
+          <!-- Bloc 1 -->
+          <article class="bts-block reveal">
+            <header class="bts-block__head">
+              <div>
+                <span class="bts-block__code">Bloc 1 · U4 — Support</span>
+                <h3>Support et mise à disposition de services informatiques</h3>
+              </div>
+              <span class="bts-block__count">6 compétences</span>
+            </header>
+
+            <ul class="bts-list">
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C1.1</span>
+                  <h4>Gérer le patrimoine informatique</h4>
+                  <span class="bts-level bts-level--notions">Notions</span>
+                </div>
+                <p>
+                  Je sais lire un schéma d'infrastructure, installer un environnement virtualisé et
+                  documenter une configuration. Je n'ai pas encore porté un inventaire complet ni un
+                  plan de renouvellement en entreprise.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> lab Docker PHP/Apache/MySQL, VM Debian/Ubuntu et VMware ;
+                  environnements de préproduction de l'IGR manipulés sous contrôle du tuteur.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C1.2</span>
+                  <h4>Répondre aux incidents et aux demandes d'assistance et d'évolution</h4>
+                  <span class="bts-level bts-level--notions">Notions</span>
+                </div>
+                <p>
+                  Je remonte et documente des anomalies de façon reproductible : étapes, résultat
+                  attendu, résultat obtenu, capture. Le traitement d'un ticket de bout en bout, avec
+                  priorisation et clôture, reste à pratiquer en production.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> remontées d'anomalies pendant les tests de TensionWatch et
+                  la recette à l'IGR ; suivi des tickets dans Asana.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C1.3</span>
+                  <h4>Développer la présence en ligne de l'organisation</h4>
+                  <span class="bts-level bts-level--project">Projet</span>
+                </div>
+                <p>
+                  Je conçois une présence en ligne propre : structure, contenus, référencement,
+                  accessibilité et identité visuelle cohérente.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> ce portfolio (SEO, Open Graph, JSON-LD, Lighthouse 100) ;
+                  mise en ligne de TensionWatch ; SEO et JSON-LD sur le Portail du Togo.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C1.4</span>
+                  <h4>Travailler en mode projet</h4>
+                  <span class="bts-level bts-level--work">Stage / alternance</span>
+                </div>
+                <p>
+                  Je travaille avec un backlog, des points réguliers et des livrables datés. J'ai
+                  pratiqué le mode projet en équipe pendant un hackathon et en alternance.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> IGR — benchmark pondéré sur 9 critères, PoC, pipelines
+                  GitLab CI, suivi Asana ; LEXILUX en équipe ; Fair'repair en projet BTS.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C1.5</span>
+                  <h4>Mettre à disposition des utilisateurs un service informatique</h4>
+                  <span class="bts-level bts-level--work">Stage / alternance</span>
+                </div>
+                <p>
+                  Je prépare un service pour des utilisateurs : environnement, données de
+                  démonstration, documentation et mise en ligne.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> TensionWatch déployé sur InfinityFree ; préproduction IGR
+                  avec données fictives ; guides et documentation technique des projets.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C1.6</span>
+                  <h4>Organiser son développement professionnel</h4>
+                  <span class="bts-level bts-level--project">Projet</span>
+                </div>
+                <p>
+                  J'organise ma progression : veille, certifications, anglais professionnel et
+                  portfolio mis à jour. Je sais expliquer ce que j'apprends et ce qu'il me reste à
+                  travailler.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> veille automatisée sur 14 flux RSS avec digest
+                  hebdomadaire ; certifications Anthropic et CNIL ; ce portfolio.
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Bloc 2 -->
+          <article class="bts-block reveal">
+            <header class="bts-block__head">
+              <div>
+                <span class="bts-block__code">Bloc 2 · U5 — SLAM</span>
+                <h3>Conception et développement d'applications</h3>
+              </div>
+              <span class="bts-block__count">3 compétences</span>
+            </header>
+
+            <ul class="bts-list">
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C2B.1</span>
+                  <h4>Concevoir et développer une solution applicative</h4>
+                  <span class="bts-level bts-level--work">Stage / alternance</span>
+                </div>
+                <p>
+                  Je pars d'un besoin métier, je modélise les données, je conçois les parcours et je
+                  développe l'application jusqu'à un usage réel.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> six applications — TensionWatch (PHP puis Java/React),
+                  Fair'repair, Ferme Togo, Portail du Togo, FormaSat, LEXILUX. Merise, UML, MVC,
+                  API REST.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C2B.2</span>
+                  <h4>Assurer la maintenance corrective ou évolutive d'une solution applicative</h4>
+                  <span class="bts-level bts-level--project">Projet</span>
+                </div>
+                <p>
+                  Je sais faire évoluer une application existante sans casser l'existant :
+                  réécriture, migration de données, correction de défauts, ajout de fonctionnalités.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> Ferme Togo en 3 versions (PHP MVC → PHP allégée →
+                  Java/PWA) ; TensionWatch V1 PHP → V2 Spring/React ; corrections issues des tests.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C2B.3</span>
+                  <h4>Gérer les données</h4>
+                  <span class="bts-level bts-level--work">Stage / alternance</span>
+                </div>
+                <p>
+                  Je conçois des modèles relationnels, j'écris des requêtes sûres et je maintiens
+                  l'intégrité des données.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> MCD/MLD, MySQL, PDO et requêtes préparées, triggers,
+                  transactions ; 24 tables et 84 routes pour Ferme Togo, 105 requêtes préparées pour
+                  Fair'repair.
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Bloc 3 -->
+          <article class="bts-block reveal">
+            <header class="bts-block__head">
+              <div>
+                <span class="bts-block__code">Bloc 3 · U6 — Cybersécurité</span>
+                <h3>Cybersécurité des services informatiques</h3>
+              </div>
+              <span class="bts-block__count">5 compétences</span>
+            </header>
+
+            <ul class="bts-list">
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C3.1</span>
+                  <h4>Protéger les données à caractère personnel</h4>
+                  <span class="bts-level bts-level--work">Stage / alternance</span>
+                </div>
+                <p>
+                  Je prends en compte la minimisation, le consentement et les droits des personnes
+                  dès la conception. J'ai été formé au RGPD par la CNIL.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> MOOC CNIL Atelier RGPD ; consentement, export JSON et
+                  suppression de compte sur Fair'repair ; données fictives en préproduction IGR.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C3.2</span>
+                  <h4>Préserver l'identité numérique de l'organisation</h4>
+                  <span class="bts-level bts-level--notions">Notions</span>
+                </div>
+                <p>
+                  Je soigne la présence numérique et la cohérence de marque, mais je n'ai pas encore
+                  géré l'identité numérique d'une organisation en production.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> nom de domaine et présence en ligne de TensionWatch ;
+                  charte, contenus et référencement du portfolio et du Portail du Togo.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C3.3</span>
+                  <h4>Sécuriser les équipements et les usages des utilisateurs</h4>
+                  <span class="bts-level bts-level--notions">Notions</span>
+                </div>
+                <p>
+                  Je connais les principes de segmentation, de moindre privilège et de
+                  sensibilisation. Je les ai pratiqués en TP, pas encore sur un parc en production.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> TP Packet Tracer et VLAN, lab Docker, documentation
+                  d'installation ; sensibilisation des utilisateurs via des guides.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C3.4</span>
+                  <h4>Garantir la disponibilité, l'intégrité et la confidentialité des services informatiques et des données</h4>
+                  <span class="bts-level bts-level--project">Projet</span>
+                </div>
+                <p>
+                  Je protège la confidentialité et l'intégrité des données par le code : hachage,
+                  contrôle d'accès, requêtes préparées, écritures atomiques. La supervision et le
+                  plan de reprise restent à mettre en place.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> hachage des mots de passe, JWT, vérification de
+                  propriété, transactions et sauvegardes quotidiennes dans Ferme Togo V3.
+                </p>
+              </li>
+
+              <li class="bts-comp">
+                <div class="bts-comp__top">
+                  <span class="bts-comp__id">C3.5</span>
+                  <h4>Assurer la cybersécurité d'une solution applicative et de son développement</h4>
+                  <span class="bts-level bts-level--project">Projet</span>
+                </div>
+                <p>
+                  J'intègre la sécurité au développement : validation des entrées, échappement des
+                  sorties, gestion des rôles et des sessions, dépendances maîtrisées.
+                </p>
+                <p class="bts-comp__proof">
+                  <strong>Preuve :</strong> OWASP, requêtes préparées, échappement XSS, verrouillage
+                  après 5 échecs et journal d'authentification sur Fair'repair ; filtre JWT sur
+                  TensionWatch V2.
+                </p>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="bts-table-wrap reveal">
+          <h3>Réalisations professionnelles — tableau de synthèse</h3>
+          <p>
+            Format attendu pour les dossiers <strong>E4</strong> (support et mise à disposition) et
+            <strong>E5</strong> (conception et développement). Les compétences C3 sont mobilisées en
+            transverse et évaluées à l'écrit en <strong>E6</strong>. Ce tableau ne remplace ni le
+            modèle officiel de la circulaire ni les attestations de stage.
+          </p>
+          <div class="bts-table-scroll">
+            <table class="bts-table">
+              <caption>Réalisations, contextes et compétences mobilisées</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Réalisation</th>
+                  <th scope="col">Contexte</th>
+                  <th scope="col">Compétences</th>
+                  <th scope="col">Preuve / livrable</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">TensionWatch</th>
+                  <td>Stage — Global Needs Institute · 2026</td>
+                  <td><span class="bts-tag">C1.3</span> <span class="bts-tag">C1.5</span> <span class="bts-tag">C2B.1</span> <span class="bts-tag">C2B.3</span> <span class="bts-tag">C3.4</span> <span class="bts-tag">C3.5</span></td>
+                  <td>Application PHP/MySQL en ligne, V2 Spring/React, documentation technique, 6 captures</td>
+                </tr>
+                <tr>
+                  <th scope="row">Automatisation de la recette</th>
+                  <td>Alternance — Institut Gustave Roussy · 2026–2027</td>
+                  <td><span class="bts-tag">C1.2</span> <span class="bts-tag">C1.4</span> <span class="bts-tag">C2B.2</span> <span class="bts-tag">C3.5</span></td>
+                  <td>Benchmark sur 9 critères, PoC Playwright/Cypress/Selenium, pipelines GitLab CI, suivi Asana</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fair'repair</th>
+                  <td>Projet BTS SLAM · 2026</td>
+                  <td><span class="bts-tag">C1.4</span> <span class="bts-tag">C2B.1</span> <span class="bts-tag">C2B.3</span> <span class="bts-tag">C3.1</span> <span class="bts-tag">C3.5</span></td>
+                  <td>39 pages, 12 tables, 105 requêtes préparées, consentement RGPD, journal d'audit</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ferme Togo</th>
+                  <td>Projet de formation · 2025–2026</td>
+                  <td><span class="bts-tag">C2B.1</span> <span class="bts-tag">C2B.2</span> <span class="bts-tag">C2B.3</span> <span class="bts-tag">C3.1</span> <span class="bts-tag">C3.4</span></td>
+                  <td>3 versions (PHP MVC, PHP allégée, Java/PWA), 24 tables, documentation Merise/UML</td>
+                </tr>
+                <tr>
+                  <th scope="row">Portail du Togo</th>
+                  <td>Projet de formation · 2026</td>
+                  <td><span class="bts-tag">C1.3</span> <span class="bts-tag">C2B.1</span> <span class="bts-tag">C2B.3</span> <span class="bts-tag">C3.4</span></td>
+                  <td>17 démarches, 11 ministères, 8 tables, JSON-LD, accessibilité, back-office CRUD</td>
+                </tr>
+                <tr>
+                  <th scope="row">FormaSat</th>
+                  <td>Projet BTS · 2026</td>
+                  <td><span class="bts-tag">C2B.1</span> <span class="bts-tag">C2B.3</span></td>
+                  <td>7 tables, 4 triggers, dashboard agrégé, notation sur 5 critères</td>
+                </tr>
+                <tr>
+                  <th scope="row">LEXILUX</th>
+                  <td>Hackathon — Assemblée nationale · 2026</td>
+                  <td><span class="bts-tag">C1.4</span> <span class="bts-tag">C2B.1</span> <span class="bts-tag">C3.1</span></td>
+                  <td>Prototype RAG ; contribution : tests utilisateurs, évaluation des réponses, remontée d'anomalies</td>
+                </tr>
+                <tr>
+                  <th scope="row">Portfolio &amp; veille</th>
+                  <td>Projet personnel · 2026</td>
+                  <td><span class="bts-tag">C1.3</span> <span class="bts-tag">C1.6</span> <span class="bts-tag">C3.2</span></td>
+                  <td>Site accessible, Lighthouse 100, 14 flux RSS, digest hebdomadaire</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="bts-gaps reveal">
+          <h3><svg class="i"><use href="#i-shield"/></svg> Points à consolider</h3>
+          <p>
+            Ce que je ne prétends pas maîtriser aujourd'hui. C'est la feuille de route de la
+            2<sup>e</sup> année et de l'alternance — pas une liste de défauts cachés.
+          </p>
+          <ul>
+            <li><strong>Support en production :</strong> GLPI/ITIL, qualification, priorisation et clôture de tickets.</li>
+            <li><strong>Systèmes et réseaux :</strong> VLAN, routage, supervision Nagios, sauvegardes et plan de reprise.</li>
+            <li><strong>Cybersécurité opérationnelle :</strong> hardening, analyse de vulnérabilités, gestion des secrets.</li>
+            <li><strong>Travail en équipe :</strong> rôle exact et part personnelle sur LEXILUX et Ferme Togo à préciser dans les fiches E4/E5.</li>
+            <li><strong>Preuves de code :</strong> dépôts GitHub publics par projet et README de déploiement.</li>
+            <li><strong>Gestion de projet :</strong> planning, budget, indicateurs et conduite du changement.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== VEILLE ===================== -->
+    <section class="section" id="veille">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">06 — Veille technologique</p>
+          <h2>Comment l'architecture logicielle évolue-t-elle avec <span class="grad">le cloud et l'IA</span> ?</h2>
+          <p class="section__lead">
+            Note de veille — novembre 2026. Une synthèse critique, pas un catalogue de buzzwords.
+          </p>
+        </header>
+
+        <div class="veille">
+          <aside class="veille__aside reveal">
+            <span class="pill pill--accent">Note de veille</span>
+            <nav class="veille__toc" aria-label="Sommaire de la veille">
+              <a href="#v1">1. Du serveur au cloud-native</a>
+              <a href="#v2">2. API-first et événementiel</a>
+              <a href="#v3">3. L'IA devient une brique</a>
+              <a href="#v4">4. Les contreparties</a>
+              <a href="#v5">5. Ce que ça change pour moi</a>
+              <a href="#v6">6. Ma méthode de veille</a>
+            </nav>
+          </aside>
+
+          <div class="veille__content">
+            <article class="v-block reveal">
+              <p class="v-lead">
+                En dix ans, on est passé d'applications monolithiques installées sur un serveur à des systèmes
+                distribués, élastiques et de plus en plus assistés par l'IA. Le cloud a déplacé le problème :
+                on ne dimensionne plus des machines, on assemble des services. L'IA déplace à son tour la
+                frontière : elle devient un composant de l'architecture, pas seulement un outil de développement.
+              </p>
+            </article>
+
+            <article class="v-block reveal" id="v1">
+              <h3><span>01</span> Du serveur dédié au cloud-native</h3>
+              <p>
+                Le monolithe n'est pas mort — il reste souvent le bon choix pour démarrer. Mais dès qu'il faut
+                absorber une charge irrégulière ou livrer plusieurs fois par jour, l'architecture se déplace vers
+                des unités plus petites et plus jetables : conteneurs, orchestration, fonctions serverless, edge.
+              </p>
+              <div class="v-grid">
+                <div class="v-card">
+                  <h4>Conteneurs &amp; orchestration</h4>
+                  <p>Docker package l'application avec ses dépendances ; Kubernetes gère le déploiement, la
+                  réplication et la reprise. Le serveur devient un détail remplaçable.</p>
+                </div>
+                <div class="v-card">
+                  <h4>Serverless &amp; edge</h4>
+                  <p>On ne paie que l'exécution, et on rapproche le calcul de l'utilisateur. Séduisant pour
+                  les pics, contraignant pour les traitements longs ou l'état persistant.</p>
+                </div>
+                <div class="v-card">
+                  <h4>Infrastructure as Code</h4>
+                  <p>Terraform, Ansible, GitOps : l'infrastructure devient versionnée, relue et reproductible.
+                  Un environnement se recrée au lieu d'être réparé à la main.</p>
+                </div>
+              </div>
+              <p class="v-takeaway">
+                <strong>Ce qui change vraiment :</strong> la compétence clé n'est plus « administrer un serveur »
+                mais « décrire un système reproductible ».
+              </p>
+            </article>
+
+            <article class="v-block reveal" id="v2">
+              <h3><span>02</span> API-first, microservices et architecture événementielle</h3>
+              <p>
+                Découper par métier (DDD) plutôt que par couche technique permet de faire évoluer chaque
+                domaine indépendamment. Les services communiquent par API (REST, GraphQL, gRPC) et, de plus en
+                plus, par événements asynchrones via un bus de messages.
+              </p>
+              <div class="v-compare">
+                <div>
+                  <h4>Avant</h4>
+                  <ul>
+                    <li>Une base de données partagée</li>
+                    <li>Déploiement de toute l'application</li>
+                    <li>Couplage fort entre modules</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Aujourd'hui</h4>
+                  <ul>
+                    <li>Une base par service (ou par domaine)</li>
+                    <li>Déploiement indépendant</li>
+                    <li>Contrats d'API et événements versionnés</li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Le revers est immédiat : ce qui était un appel de fonction devient un appel réseau, avec sa
+                latence, ses pannes partielles et ses doublons. L'observabilité (traces, métriques, logs
+                corrélés) cesse d'être un luxe — c'est la seule façon de comprendre un système distribué.
+              </p>
+              <p class="v-takeaway">
+                <strong>Mon constat :</strong> les microservices ne sont pas une fin en soi. Ils se justifient
+                par une contrainte d'échelle ou d'organisation, pas par la mode.
+              </p>
+            </article>
+
+            <article class="v-block reveal" id="v3">
+              <h3><span>03</span> L'IA devient une brique d'architecture</h3>
+              <p>
+                On distingue trois usages, souvent mélangés : l'IA qui aide à <em>écrire</em> le logiciel,
+                l'IA qui aide à l'<em>exploiter</em>, et l'IA qui fait partie du <em>produit</em>. C'est le
+                troisième qui modifie réellement l'architecture.
+              </p>
+              <div class="v-grid">
+                <div class="v-card v-card--accent">
+                  <h4>IA dans le produit</h4>
+                  <p>Un LLM n'est pas une base de données : il faut lui fournir un contexte (RAG), stocker des
+                  embeddings, encadrer les réponses (guardrails) et prévoir le cas où il se trompe.</p>
+                </div>
+                <div class="v-card">
+                  <h4>Nouvelles couches</h4>
+                  <p>Base vectorielle, orchestrateur d'agents, passerelle IA (AI gateway) pour centraliser
+                  modèles, quotas, coûts et journalisation. Chaque couche ajoute un point de panne et un coût.</p>
+                </div>
+                <div class="v-card">
+                  <h4>IA dans le cycle de dev</h4>
+                  <p>Génération de code, de tests et de jeux de données. Utile pour démarrer vite, dangereux
+                  sans relecture : un test généré peut valider un comportement faux.</p>
+                </div>
+                <div class="v-card">
+                  <h4>IA dans l'exploitation</h4>
+                  <p>AIOps : détection d'anomalies, corrélation d'incidents, résumé de logs. L'humain garde
+                  la décision, la machine fait le tri.</p>
+                </div>
+              </div>
+              <p class="v-takeaway">
+                <strong>Le point critique :</strong> une architecture qui dépend d'un modèle externe dépend
+                aussi de son prix, de sa disponibilité, de sa version et de ses conditions d'usage. Il faut
+                prévoir le remplacement — un « fournisseur de modèle » doit être interchangeable.
+              </p>
+            </article>
+
+            <article class="v-block reveal" id="v4">
+              <h3><span>04</span> Les contreparties : coût, sécurité, souveraineté</h3>
+              <p>
+                Chaque gain a son prix. Le cloud rend la scalabilité facile mais la facture opaque : sans
+                FinOps, les coûts dérivent. La distribution accélère les livraisons mais multiplie la surface
+                d'attaque. L'IA raccourcit certains travaux mais introduit de nouveaux risques.
+              </p>
+              <ul class="v-list">
+                <li><strong>FinOps :</strong> mesurer le coût par service, par environnement et par requête ; éteindre ce qui ne sert pas.</li>
+                <li><strong>Zero Trust :</strong> authentifier et autoriser chaque appel, pas seulement le périmètre réseau.</li>
+                <li><strong>Sécurité de la chaîne IA :</strong> injection de prompt, fuite de données via le contexte, empoisonnement du RAG.</li>
+                <li><strong>Données sensibles :</strong> dans la santé, l'hébergement doit être certifié HDS et le traitement conforme au RGPD. Un LLM public n'est pas un espace de test acceptable.</li>
+                <li><strong>Sobriété :</strong> le coût énergétique de l'entraînement et de l'inférence entre dans les critères de choix, au même titre que la performance.</li>
+              </ul>
+            </article>
+
+            <article class="v-block reveal" id="v5">
+              <h3><span>05</span> Ce que ça change concrètement pour moi</h3>
+              <p>
+                Mon sujet d'alternance est exactement à l'intersection de ces évolutions. Plus une architecture
+                est distribuée, plus les tests automatisés deviennent le filet de sécurité qui permet de livrer.
+              </p>
+              <div class="v-quote">
+                « L'automatisation ne dit pas “c'est bon pour la production”. Elle dit “voilà exactement ce
+                qui a été vérifié, et voilà la preuve”. La décision d'accepter reste humaine. »
+              </div>
+              <p>
+                À mon niveau, cela veut dire trois choses : écrire des tests lisibles et stables, intégrer les
+                campagnes à la CI, et savoir rattacher chaque test à une ligne du cahier de recette. L'IA peut
+                accélérer l'écriture des scénarios et le tri des échecs, mais la validation reste une
+                responsabilité d'équipe.
+              </p>
+            </article>
+
+            <article class="v-block reveal" id="v6">
+              <h3><span>06</span> Ma méthode de veille</h3>
+              <div class="v-grid">
+                <div class="v-card">
+                  <h4>Rythme</h4>
+                  <p>Une veille hebdomadaire courte : lecture des flux, sélection de 2 à 3 signaux, fiche de
+                  lecture avec source, date et niveau de confiance.</p>
+                </div>
+                <div class="v-card">
+                  <h4>Esprit critique</h4>
+                  <p>Distinguer l'annonce commerciale du retour d'expérience. Chercher qui a mesuré quoi, sur
+                  quelle durée, et avec quelles limites.</p>
+                </div>
+              </div>
+
+              <h4 class="v-sources-title">Sources principales</h4>
+              <ul class="v-sources">
+                <li><a href="https://www.cncf.io/reports/" target="_blank" rel="noopener">CNCF — rapports annuels <svg class="i"><use href="#i-external"/></svg></a></li>
+                <li><a href="https://www.thoughtworks.com/radar" target="_blank" rel="noopener">ThoughtWorks Technology Radar <svg class="i"><use href="#i-external"/></svg></a></li>
+                <li><a href="https://dora.dev/research/" target="_blank" rel="noopener">DORA — recherche DevOps <svg class="i"><use href="#i-external"/></svg></a></li>
+                <li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener">OWASP Top 10 for LLM Applications <svg class="i"><use href="#i-external"/></svg></a></li>
+                <li><a href="https://www.anssi.gouv.fr/" target="_blank" rel="noopener">ANSSI — recommandations sécurité <svg class="i"><use href="#i-external"/></svg></a></li>
+                <li><a href="https://www.cnil.fr/" target="_blank" rel="noopener">CNIL — RGPD et IA <svg class="i"><use href="#i-external"/></svg></a></li>
+                <li><a href="https://www.infoq.com/" target="_blank" rel="noopener">InfoQ — retours d'expérience <svg class="i"><use href="#i-external"/></svg></a></li>
+                <li><a href="https://opentelemetry.io/" target="_blank" rel="noopener">OpenTelemetry — observabilité <svg class="i"><use href="#i-external"/></svg></a></li>
+              </ul>
+
+              <!-- veille:auto:start -->
+              <div class="v-auto">
+                <div class="v-auto__head">
+                  <h4>Sélection automatique — 10 novembre 2026</h4>
+                  <span class="pill">14 flux · 21 jours</span>
+                </div>
+                <ul class="v-auto__list">
+                  <li>
+                    <a href="https://www.infoq.com/articles/agentic-ai-architecture-challenges-opportunities/" target="_blank" rel="noopener">Agentic AI Architecture: Current Challenges and Future Opportunities <svg class="i"><use href="#i-external"/></svg></a>
+                    <span>InfoQ · 9 nov. 2026</span>
+                  </li>
+                  <li>
+                    <a href="https://www.cncf.io/blog/2026/11/09/run-linux-applications-in-hypervisor-isolated-micro-vms-with-hyperlight/" target="_blank" rel="noopener">Run Linux applications in hypervisor-isolated micro-VMs with Hyperlight <svg class="i"><use href="#i-external"/></svg></a>
+                    <span>CNCF · 9 nov. 2026</span>
+                  </li>
+                  <li>
+                    <a href="https://www.infoq.com/podcasts/distributed-llm-inference-kubernetes/" target="_blank" rel="noopener">Distributed LLM Inference on Kubernetes with llm-d, Wasm, &amp; TornadoVM <svg class="i"><use href="#i-external"/></svg></a>
+                    <span>InfoQ · 9 nov. 2026</span>
+                  </li>
+                  <li>
+                    <a href="https://www.cncf.io/blog/2026/11/03/openkruise-agents-v0-6-0-leaping-ahead-in-agent-sandbox-security-and-automation/" target="_blank" rel="noopener">OpenKruise Agents v0.6.0: Leaping ahead in agent Sandbox security and automation <svg class="i"><use href="#i-external"/></svg></a>
+                    <span>CNCF · 3 nov. 2026</span>
+                  </li>
+                  <li>
+                    <a href="https://www.lemondeinformatique.fr/articles/ia-generative-du-poc-a-la-production-les-choix-str" target="_blank" rel="noopener">IA générative : du POC à la production, les choix structurants pour la DSI <svg class="i"><use href="#i-external"/></svg></a>
+                    <span>Le Monde Informatique · 28 oct. 2026</span>
+                  </li>
+                </ul>
+                <p class="v-auto__note">
+                  Sélection issue des flux RSS, classée par pertinence. Le tri est automatique ;
+                  la lecture critique et la fiche de veille restent manuelles.
+                </p>
+              </div>
+              <!-- veille:auto:end -->
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMATION ===================== -->
+    <section class="section section--alt" id="formation">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">07 — Formation</p>
+          <h2>Parcours <span class="grad">académique</span></h2>
+        </header>
+
+        <div class="edu">
+          <article class="edu-card edu-card--current reveal">
+            <div class="edu-card__top">
+              <span class="pill pill--live">En cours</span>
+              <span class="edu-card__date">2025 — 2027</span>
+            </div>
+            <h3>BTS SIO — option SLAM</h3>
+            <p class="edu-card__org">Ingetis · Paris 5<sup>e</sup></p>
+            <p>Solutions logicielles et applications métiers : développement web, bases de données
+            relationnelles, conception Merise/UML, cybersécurité et gestion de projet.</p>
+            <ul class="chips chips--sm">
+              <li>PHP MVC</li><li>SQL</li><li>Algorithmique</li><li>Réseaux</li>
+            </ul>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-card__top">
+              <span class="pill">Diplôme</span>
+              <span class="edu-card__date">2023 — 2024</span>
+            </div>
+            <h3>Licence 1 Informatique, Réseaux &amp; Télécommunications</h3>
+            <p class="edu-card__org">École Supérieure de Gestion, d'Informatique et des Sciences · Lomé, Togo</p>
+            <p>Bases en informatique, réseaux et télécommunications. Méthodes de travail, logique et initiation
+            à la programmation.</p>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-card__top">
+              <span class="pill">Baccalauréat</span>
+              <span class="edu-card__date">2020 — 2023</span>
+            </div>
+            <h3>Baccalauréat scientifique</h3>
+            <p class="edu-card__org">Complexe Scolaire « Les Victorieux » · Lomé, Togo</p>
+            <p>Formation scientifique, rigueur analytique et résolution de problèmes.</p>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-card__top">
+              <span class="pill">Certifications</span>
+              <span class="edu-card__date">2025 — 2026</span>
+            </div>
+            <h3>IA générative, RGPD &amp; anglais professionnel</h3>
+            <p class="edu-card__org">Anthropic · CNIL · ASSOFAC</p>
+            <p><strong>AI Fluency Framework &amp; Foundations</strong> et <strong>Claude 101</strong>
+            (Anthropic, mars 2026) ; <strong>MOOC Atelier RGPD</strong> (CNIL, décembre 2025) ;
+            préparation au TOEIC — score <strong>585/990</strong>.</p>
+            <ul class="chips chips--sm">
+              <li>IA générative</li><li>Prompt engineering</li><li>RGPD</li><li>TOEIC 585</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="contact__card reveal">
+          <div class="contact__glow" aria-hidden="true"></div>
+          <p class="eyebrow">08 — Contact</p>
+          <h2>On travaille <span class="grad">ensemble</span> ?</h2>
+          <p class="contact__lead">
+            Une collaboration, un stage, un projet web ou une question sur mon parcours :
+            le plus simple reste un e-mail.
+          </p>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:rayanerakpo@gmail.com?subject=Prise%20de%20contact%20—%20portfolio">
+              <svg class="i"><use href="#i-mail"/></svg>
+              rayanerakpo@gmail.com
+            </a>
+            <button class="btn btn--ghost" id="copy-mail" type="button" data-mail="rayanerakpo@gmail.com">
+              <svg class="i"><use href="#i-check"/></svg>
+              Copier l'adresse
+            </button>
+          </div>
+
+          <ul class="contact__list">
+            <!-- <li><svg class="i"><use href="#i-phone"/></svg> <a href="tel:+33759574907">07 59 57 49 07</a></li>-->
+            <li><svg class="i"><use href="#i-pin"/></svg> Île-de-France</li>
+            <li><svg class="i"><use href="#i-git"/></svg> <a href="https://github.com/rayanerakpo-blip" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> Rayane AKPO — construit à la main, sans framework.</p>
+      <a class="footer__top" href="#haut" aria-label="Retour en haut">
+        <svg class="i"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL PROJET ===================== -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" data-close aria-label="Fermer">
+        <svg class="i"><use href="#i-close"/></svg>
+      </button>
+      <div class="modal__body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
