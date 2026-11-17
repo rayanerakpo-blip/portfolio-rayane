@@ -165,7 +165,7 @@ affichés dans chaque fiche projet du site.
 | Projet | URL | Comptes de démonstration |
 |--------|-----|--------------------------|
 | TensionWatch | <https://tensionwatch.wuaze.com> | `demo@tensionwatch.local` / `demo2026` |
-| Fair'repair | <https://fairrepair.wuaze.com> | `alice.fournier.27@demo.fairrepair.fr` (client), `sarah.mercier.0@demo.fairrepair.fr` (réparateur), `admin@demo.fairrepair.fr` (admin) / `Demo@Fair2026` |
+| Fair'repair | <https://fairrepair.wuaze.com><br>Lien de secours : <https://mifarma.wuaze.com/fairrepair/> | `alice.fournier.27@demo.fairrepair.fr` (client), `sarah.mercier.0@demo.fairrepair.fr` (réparateur), `admin@demo.fairrepair.fr` (admin) / `Demo@Fair2026` |
 | Ferme Togo (V2 allégée) | <https://mifarma.wuaze.com> | `proprietaire@laferme.tg` / `admin123`, `collaborateur@laferme.tg` / `collab123` |
 | FormaSat | <https://formasat.wuaze.com> | `admin@formasat.fr` / `admin2026` |
 

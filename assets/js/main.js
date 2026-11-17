@@ -189,6 +189,7 @@
         "Le paiement en ligne est simulé ; il n'y a pas encore de messagerie interne ni de notifications e-mail à chaque changement de statut.",
       demo: {
         url: "https://fairrepair.wuaze.com",
+        fallback: "https://mifarma.wuaze.com/fairrepair/",
         accounts: [
           ["Utilisateur", "alice.fournier.27@demo.fairrepair.fr", "Demo@Fair2026"],
           ["Réparateur", "sarah.mercier.0@demo.fairrepair.fr", "Demo@Fair2026"],
@@ -197,6 +198,7 @@
       },
       links: [
         { label: "Voir la démo en ligne", href: "https://fairrepair.wuaze.com", external: true },
+        { label: "Démo (lien de secours)", href: "https://mifarma.wuaze.com/fairrepair/", external: true },
         { label: "Code source", href: "https://github.com/rayanerakpo-blip/fair-repair", external: true },
       ],
       gallery: [
@@ -345,6 +347,7 @@
     const demoBlock = p.demo
       ? `<div class="m-section m-section--demo"><h4>Tester la démo en ligne</h4>
            <p><a href="${p.demo.url}" target="_blank" rel="noopener">${p.demo.url}</a>${p.demo.version ? ` — ${p.demo.version}` : ""}</p>
+           ${p.demo.fallback ? `<p class="m-hint">Lien de secours (si le DNS n'a pas encore propagé) : <a href="${p.demo.fallback}" target="_blank" rel="noopener">${p.demo.fallback}</a></p>` : ""}
            <ul class="m-accounts">${p.demo.accounts
              .map(
                ([role, email, password]) =>
