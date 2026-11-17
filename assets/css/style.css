@@ -412,38 +412,8 @@ h1, h2, h3, h4, p { margin: 0; }
 .skills__note a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .skills__note a:hover { color: var(--text); }
 
-/* ---------- Filtres ---------- */
-.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-.filter {
-  padding: 9px 16px; border-radius: 999px; cursor: pointer;
-  border: 1px solid var(--border); background: var(--surface);
-  font-size: 13.5px; font-weight: 600; color: var(--muted);
-  transition: all .18s;
-}
-.filter:hover { color: var(--text); border-color: var(--border-strong); }
-.filter.is-active {
-  color: #04121a; border-color: transparent;
-  background: linear-gradient(135deg, var(--accent), var(--accent-3));
-}
-
 /* ---------- Projets ---------- */
 .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.project-archive {
-  margin-top: 20px; border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--surface); overflow: hidden;
-}
-.project-archive__summary {
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  padding: 18px 22px; cursor: pointer; list-style: none;
-  font-size: 14px; font-weight: 650; color: var(--text);
-}
-.project-archive__summary::-webkit-details-marker { display: none; }
-.project-archive__summary::after {
-  content: "+"; color: var(--accent); font-size: 20px; line-height: 1;
-}
-.project-archive[open] .project-archive__summary::after { content: "−"; }
-.project-archive__count { margin-left: auto; font-size: 12px; font-weight: 500; color: var(--muted); }
-.project-archive__grid { padding: 20px; border-top: 1px solid var(--border); }
 .project {
   display: flex; flex-direction: column;
   border: 1px solid var(--border); border-radius: var(--radius);
@@ -451,15 +421,6 @@ h1, h2, h3, h4, p { margin: 0; }
   transition: border-color .22s, transform .22s, box-shadow .22s;
 }
 .project:hover { border-color: var(--border-strong); transform: translateY(-4px); box-shadow: var(--shadow); }
-.project.is-hidden { display: none; }
-/* Dernière carte seule sur une ligne : centrée en desktop */
-@media (min-width: 821px) {
-  .projects > .project:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    width: calc(50% - 10px);
-    justify-self: center;
-  }
-}
 
 .project__preview {
   position: relative; padding: 0; min-height: 190px;
@@ -467,27 +428,6 @@ h1, h2, h3, h4, p { margin: 0; }
   border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
-
-/* Couverture typographique (projet sans capture d'écran) */
-.project__preview--text {
-  min-height: 250px; display: grid; place-items: center;
-  background:
-    radial-gradient(120% 120% at 18% 8%, rgba(34, 211, 238, .20), transparent 58%),
-    radial-gradient(120% 120% at 84% 92%, rgba(167, 139, 250, .18), transparent 60%),
-    var(--surface-2, #0b1220);
-}
-.project__cover { padding: 24px; text-align: center; }
-.project__cover-kicker {
-  display: block; font-family: var(--mono); font-size: 10.5px;
-  text-transform: uppercase; letter-spacing: 1.3px; color: var(--muted);
-}
-.project__cover strong {
-  display: block; margin: 10px 0 6px;
-  font-size: clamp(30px, 5vw, 42px); letter-spacing: -1.2px; line-height: 1;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.project__cover-sub { display: block; font-size: 13.5px; color: var(--text-soft); }
 
 /* Vraies captures d'écran des projets */
 .project__shot {
@@ -510,7 +450,6 @@ h1, h2, h3, h4, p { margin: 0; }
 .link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .link .i { width: 15px; height: 15px; transition: transform .18s; }
 .link:hover .i { transform: translateX(3px); }
-.projects__note { margin-top: 24px; font-size: 13.5px; color: var(--muted); text-align: center; }
 
 /* ---------- BTS SIO ---------- */
 .bts-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
@@ -896,8 +835,7 @@ h1, h2, h3, h4, p { margin: 0; }
 
 /* ---------- Impression ---------- */
 @media print {
-  .site-header, .hero__visual, .filters, .modal, .site-footer, .contact__actions, .hero__cta { display: none !important; }
-  .project-archive:not([open]) > .project-archive__grid { display: grid !important; }
+  .site-header, .hero__visual, .modal, .site-footer, .contact__actions, .hero__cta { display: none !important; }
   body { background: #fff; color: #111; }
   body::before { display: none; }
   .section { padding: 24px 0; break-inside: avoid; }

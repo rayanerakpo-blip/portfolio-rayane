@@ -108,27 +108,6 @@
     counters.forEach((el) => co.observe(el));
   }
 
-  /* ------------------------------------------------------------ Filtres */
-  const filters = $$(".filter");
-  const projects = $$(".project");
-  const projectArchive = $("#project-archive");
-
-  filters.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filters.forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-      const f = btn.dataset.filter;
-      let hasArchiveMatch = false;
-      projects.forEach((p) => {
-        const tags = (p.dataset.tags || "").split(/\s+/);
-        const matches = f === "all" || tags.includes(f);
-        p.classList.toggle("is-hidden", !matches);
-        if (matches && projectArchive?.contains(p)) hasArchiveMatch = true;
-      });
-      if (projectArchive) projectArchive.open = f === "all" || hasArchiveMatch;
-    });
-  });
-
   /* ------------------------------------------------------------- Modale */
   const modal = $("#modal");
   const modalBody = $("#modal-body");
@@ -180,33 +159,6 @@
         ["tw-login.jpg", "Connexion", "Authentification avec mot de passe haché."],
         ["twapi-login.jpg", "Connexion React", "SPA React 19 + TypeScript : écran de connexion relié à l'API Spring Boot."],
       ],
-    },
-    lexilux: {
-      tag: "Hackathon · Assemblée nationale 2026",
-      title: "LEXILUX",
-      stats: [
-        ["2026", "Assemblée nationale"],
-        ["RAG", "architecture IA"],
-        ["1", "agent conversationnel"],
-      ],
-      problem:
-        "Le droit français est difficile d'accès : vocabulaire technique, phrases longues, renvois entre articles. Un citoyen ne sait pas toujours ce que dit la loi ni ce qu'elle implique pour sa situation.",
-      solution:
-        "Un assistant conversationnel qui reformule le droit en langage clair. Le projet a été conçu en équipe pendant un hackathon : définition des cas d'usage, tests avec différents profils, évaluation de la pertinence des réponses et remontée des anomalies.",
-      points: [
-        "Réalisation de tests utilisateurs sur différents profils et cas d'usage.",
-        "Évaluation de la pertinence et de la compréhension des réponses de l'agent.",
-        "Identification et remontée d'anomalies fonctionnelles et de pistes d'amélioration.",
-        "Analyse du fonctionnement d'un outil intégrant une API d'IA et un système RAG.",
-        "Proposition d'améliorations des parcours et des modes d'interaction.",
-        "Travail en équipe avec les développeurs autour des retours utilisateurs.",
-      ],
-      choices:
-        "Le choix central est de ne pas laisser le modèle répondre seul : l'outil combine une API d'IA et un système RAG, et l'évaluation humaine vérifie la pertinence et la compréhension des réponses. Les tests utilisateurs ont servi de garde-fou : une réponse fluide n'est pas forcément une réponse juste.",
-      limits:
-        "Le projet est un prototype de hackathon, pas un service juridique : les réponses ne remplacent pas un professionnel du droit, et les cas d'usage couverts restent limités.",
-      links: [],
-      gallery: [],
     },
     fairrepair: {
       tag: "Projet BTS SLAM · 2026",
@@ -289,45 +241,14 @@
         ["fermejava-conseil.jpg", "Recommandations — V3", "Conseils agronomiques explicables produits par le moteur de règles."],
       ],
     },
-    togo: {
-      tag: "Portail public · 2026",
-      title: "Portail du Togo",
-      stats: [
-        ["17", "démarches"],
-        ["11", "ministères"],
-        ["8", "tables"],
-      ],
-      problem:
-        "L'information administrative togolaise est dispersée entre sites ministériels, PDF et bouche-à-oreille. Le citoyen ne sait pas quels documents fournir, ni quel délai prévoir.",
-      solution:
-        "Un portail inspiré de france.gouv.fr : démarches classées, fiches détaillées, ministères, actualités, numéros d'urgence et recherche globale avec suggestions instantanées. Un back-office permet de tout administrer.",
-      points: [
-        "Recherche AJAX avec autocomplétion sur les démarches, ministères et actualités.",
-        "Fiches démarche : documents requis, étapes, coût, délai, lieu, liens officiels.",
-        "Back-office CRUD complet, boîte de messages, export CSV et journal d'audit.",
-        "SEO : JSON-LD, Open Graph, URL canonique, sitemap XML dynamique et robots.txt.",
-        "Accessibilité : lien d'évitement, ARIA, navigation clavier, focus visible, réduction des animations.",
-        "Contact protégé par honeypot et limitation de fréquence.",
-      ],
-      choices:
-        "PHP sans framework pour rester portable, mais avec une vraie exigence de qualité front : identité visuelle du Togo en SVG, feuille d'impression dédiée, compression et cache via .htaccess.",
-      limits:
-        "Les données de démarches sont des données de démonstration ; le portail n'est pas rattaché à une source officielle.",
-      links: [{ label: "Code source", href: "https://github.com/rayanerakpo-blip/portail-du-togo", external: true }],
-      gallery: [
-        ["togo-home.jpg", "Accueil", "Recherche globale et accès aux démarches les plus consultées."],
-        ["togo-demarches.jpg", "Démarches", "Liste filtrable des démarches administratives."],
-        ["togo-urgences.jpg", "Urgences", "Numéros d'urgence et contacts utiles."],
-      ],
-    },
 
     formasat: {
       tag: "Projet BTS · 2026",
       title: "FormaSat",
       stats: [
-        ["7", "tables"],
+        ["8", "tables"],
         ["5", "critères"],
-        ["4", "triggers SQL"],
+        ["5", "triggers SQL"],
       ],
       problem:
         "Les retours sur les modules de formation sont collectés de façon informelle : impossible de comparer les promotions, de repérer un module en difficulté ou de suivre une évolution dans le temps.",

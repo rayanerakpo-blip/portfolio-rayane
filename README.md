@@ -40,8 +40,8 @@ portfolio-rayane/
 ├─ index.html              # tout le contenu (sections sémantiques, dont #bts-sio)
 ├─ assets/
 │  ├─ css/style.css        # design system, thèmes clair/sombre, responsive, impression
-│  ├─ js/main.js           # thème, menu, filtres, modales, galeries, copie e-mail
-│  ├─ img/                 # 27 captures d'écran réelles des projets
+│  ├─ js/main.js           # thème, menu, modales, galeries, copie e-mail
+│  ├─ img/                 # 24 captures d'écran réelles des projets
 │  └─ CV_Rayane_AKPO.pdf   # CV téléchargeable
 ├─ veille/                 # automatisation de la veille (RSS → digest)
 │  ├─ sources.json         # flux, thèmes, poids, mots-clés
@@ -55,20 +55,19 @@ portfolio-rayane/
 Aucune police, icône ou bibliothèque externe : les icônes sont un sprite SVG inline et
 les polices sont celles du système. Le site fonctionne donc hors ligne.
 
-### Les 6 projets présentés
+### Les 4 projets présentés
 
-| Projet | Versions | Stack | Fiche |
+| Projet | Contexte | Stack | Fiche |
 |--------|----------|-------|-------|
-| **À la une** — TensionWatch (stage Global Needs Institute) | V1 PHP · V2 Java/React | PHP 8, MySQL, Spring Boot 3.2, React 19, JWT | `tensionwatch` |
-| **À la une** — LEXILUX (hackathon Assemblée nationale) | — | IA générative, RAG, tests utilisateurs, UX | `lexilux` |
-| **À la une** — Fair'repair | — | PHP 8.2, MySQL, OpenStreetMap | `fairrepair` |
-| Ferme Togo | V1 PHP MVC · V2 PHP allégée · V3 Java/PWA | PHP 8.2, MySQL, Java 25, PWA, i18n | `ferme` |
-| Portail du Togo | — | PHP 8, MySQL, AJAX, JSON-LD | `togo` |
-| FormaSat | — | PHP 8, MySQL, triggers | `formasat` |
+| TensionWatch | Stage — Global Needs Institute | PHP 8, MySQL, Spring Boot 3.2, React 19, JWT | `tensionwatch` |
+| Fair'repair | Projet BTS SLAM | PHP 8.2, MySQL, OpenStreetMap | `fairrepair` |
+| Ferme Togo | Application métier | PHP 8.2, MySQL, Java, PWA, i18n | `ferme` |
+| FormaSat | Projet BTS — BDD | PHP 8, MySQL, triggers | `formasat` |
 
 La clé `Fiche` correspond à la valeur de `data-project` dans `index.html` et à l'entrée
-du même nom dans l'objet `data` de `assets/js/main.js`. Les trois premiers sont affichés
-en premier ; les autres restent disponibles dans une liste repliable et via les filtres.
+du même nom dans l'objet `data` de `assets/js/main.js`. Les quatre cartes sont affichées
+dans la même grille, sans filtre technique : l'objectif est de montrer un parcours
+d'étudiant, pas un catalogue d'outils.
 
 ### Dépôts GitHub
 
@@ -79,12 +78,11 @@ en premier ; les autres restent disponibles dans une liste repliable et via les 
 | Fair'repair | <https://github.com/rayanerakpo-blip/fair-repair> |
 | Ferme Togo — V1 | <https://github.com/rayanerakpo-blip/ferme-togo> |
 | La Ferme — V2 allégée | <https://github.com/rayanerakpo-blip/la-ferme-togo> |
-| Portail du Togo | <https://github.com/rayanerakpo-blip/portail-du-togo> |
 | FormaSat | <https://github.com/rayanerakpo-blip/formasat> |
 | Portfolio | <https://github.com/rayanerakpo-blip/portfolio-rayane> |
 
 Les liens sont aussi disponibles dans chaque fiche projet, sous « Code source ».
-LEXILUX n'a pas de dépôt public : le prototype a été réalisé en équipe pendant le hackathon.
+D'autres dépôts publics sont visibles sur le compte GitHub.
 
 La section Compétences reste volontairement courte : **4 cartes et 13 compétences**,
 celles qui sont réellement pratiquées en formation, en projet ou en alternance. Elle ne
@@ -145,14 +143,13 @@ qu'une absence assumée.
 
 ### Captures d'écran
 
-Les 27 images de `assets/img/` sont de **vraies captures** des applications, prises en local
+Les 24 images de `assets/img/` sont de **vraies captures** des applications, prises en local
 sur les projets démarrés (Apache/MySQL AMPPS, serveur Java et serveur React). Aucune maquette
 n'est présentée comme une capture.
 
-Cinq cartes projet affichent une capture dans `.project__preview`, et leur fiche détaillée
-(modale) contient une galerie : `gallery` dans l'objet `data` de `assets/js/main.js`.
-La sixième carte, **LEXILUX**, utilise une couverture typographique CSS
-(`.project__preview--text`) faute de capture : aucun visuel n'est inventé.
+Les quatre cartes projet affichent une capture dans `.project__preview`, et leur fiche
+détaillée (modale) contient une galerie : `gallery` dans l'objet `data` de
+`assets/js/main.js`.
 
 Pour remplacer une capture :
 
