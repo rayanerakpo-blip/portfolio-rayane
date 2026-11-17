@@ -157,19 +157,23 @@ Pour remplacer une capture :
 2. garder le ratio 7:6 environ (les fichiers actuels font 980 × 840 ou 1000 × 840 px) ;
 3. mettre à jour le texte alternatif (`alt`) dans `index.html` et la légende dans `main.js`.
 
-Comptes de démonstration utilisés pour les captures (bases locales uniquement, données
-fictives) :
+### Démos en ligne
 
-| Application | Compte | Mot de passe |
-|-------------|--------|--------------|
-| TensionWatch — version PHP | `demo@tensionwatch.local` | `demo2026` |
-| TensionWatch — version Java/React | `demo@tensionwatch.local` | `demo2026` |
-| Ferme Togo — version PHP MVC | `proprietaire@ferme.togo` | `ferme2026` |
-| Ferme Togo — version Java/PWA | `proprio` | `ferme2024` |
-| Ferme Togo — version allégée | `demo@laferme.tg` | `demo2026` |
-| FormaSat (admin) | `admin@formasat.fr` | `admin2026` |
+Quatre applications sont déployées sur InfinityFree. Les liens et les comptes sont aussi
+affichés dans chaque fiche projet du site.
 
-Ces comptes et ces données n'existent que dans les bases MySQL locales de démonstration.
+| Projet | URL | Comptes de démonstration |
+|--------|-----|--------------------------|
+| TensionWatch | <https://tensionwatch.wuaze.com> | `demo@tensionwatch.local` / `demo2026` |
+| Fair'repair | <https://fairrepair.wuaze.com> | `alice.fournier.27@demo.fairrepair.fr` (client), `sarah.mercier.0@demo.fairrepair.fr` (réparateur), `admin@demo.fairrepair.fr` (admin) / `Demo@Fair2026` |
+| Ferme Togo (V2 allégée) | <https://mifarma.wuaze.com> | `proprietaire@laferme.tg` / `admin123`, `collaborateur@laferme.tg` / `collab123` |
+| FormaSat | <https://formasat.wuaze.com> | `admin@formasat.fr` / `admin2026` |
+
+Les données hébergées sont des données de démonstration, distinctes des bases locales
+utilisées pour les captures du portfolio. Le compte MySQL d'InfinityFree n'a pas le
+privilège `CREATE TRIGGER` : les cinq triggers de FormaSat sont versionnés dans le dépôt
+et applicables sur un serveur qui l'autorise, mais la démo affiche des agrégats
+initialisés à l'import.
 
 ---
 

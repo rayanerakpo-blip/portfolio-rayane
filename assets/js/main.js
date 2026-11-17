@@ -146,6 +146,10 @@
         "Deux implémentations pour deux objectifs. La V1 devait rester déployable sur un hébergement mutualisé gratuit, sans framework, tout en gardant un code lisible. La V2 est une montée en compétence volontaire : comprendre ce que Spring apporte (injection de dépendances, JPA, sécurité déclarative) et ce que React apporte (composants, état, routage).",
       limits:
         "V1 : un utilisateur ne peut suivre qu'un seul patient, le mot de passe oublié n'est pas implémenté et l'export repose sur l'impression navigateur. V2 : pas encore de README racine ni de tests d'intégration back-end, et pas de déploiement en ligne.",
+      demo: {
+        url: "https://tensionwatch.wuaze.com",
+        accounts: [["Démonstration", "demo@tensionwatch.local", "demo2026"]],
+      },
       links: [
         { label: "Voir la démo en ligne", href: "https://tensionwatch.wuaze.com", external: true },
         { label: "Code V1 (PHP)", href: "https://github.com/rayanerakpo-blip/TensionWatch", external: true },
@@ -183,7 +187,18 @@
         "Développement sans framework pour maîtriser chaque brique : routage, sessions, autorisations et accès aux données. Le projet est documenté par un support de soutenance et un script de démonstration minuté.",
       limits:
         "Le paiement en ligne est simulé ; il n'y a pas encore de messagerie interne ni de notifications e-mail à chaque changement de statut.",
-      links: [{ label: "Code source", href: "https://github.com/rayanerakpo-blip/fair-repair", external: true }],
+      demo: {
+        url: "https://fairrepair.wuaze.com",
+        accounts: [
+          ["Utilisateur", "alice.fournier.27@demo.fairrepair.fr", "Demo@Fair2026"],
+          ["Réparateur", "sarah.mercier.0@demo.fairrepair.fr", "Demo@Fair2026"],
+          ["Administrateur", "admin@demo.fairrepair.fr", "Demo@Fair2026"],
+        ],
+      },
+      links: [
+        { label: "Voir la démo en ligne", href: "https://fairrepair.wuaze.com", external: true },
+        { label: "Code source", href: "https://github.com/rayanerakpo-blip/fair-repair", external: true },
+      ],
       gallery: [
         ["fairrepair-home.jpg", "Accueil", "Recherche de réparateurs, services et avis sur la page d'accueil."],
         ["fairrepair-carte.jpg", "Carte interactive", "Carte OpenStreetMap des réparateurs référencés."],
@@ -221,7 +236,16 @@
         "Trois réponses à trois contraintes réelles : la V1 privilégie la complétude métier, la V2 la portabilité sur un mutualisé, la V3 l'autonomie sur une machine rurale où seul le JDK est garanti. Dans les trois cas, les règles agronomiques restent déterministes et explicables plutôt qu'un modèle opaque.",
       limits:
         "La V1 couvre 2 des 17 hectares et l'import drone reste un fichier structuré. La V2 laisse de côté le drone et l'observatoire. La V3 calcule un indice de verdeur ExG, pas un NDVI, et son rendu tactile n'a pas pu être testé faute de navigateur.",
+      demo: {
+        url: "https://mifarma.wuaze.com",
+        version: "V2 allégée — version mise en ligne",
+        accounts: [
+          ["Propriétaire", "proprietaire@laferme.tg", "admin123"],
+          ["Collaborateur", "collaborateur@laferme.tg", "collab123"],
+        ],
+      },
       links: [
+        { label: "Voir la démo en ligne", href: "https://mifarma.wuaze.com", external: true },
         { label: "Code V1 (PHP)", href: "https://github.com/rayanerakpo-blip/ferme-togo", external: true },
         { label: "Code V2 (PHP allégée)", href: "https://github.com/rayanerakpo-blip/la-ferme-togo", external: true },
       ],
@@ -264,8 +288,17 @@
       choices:
         "Le choix fort du projet est de déporter une partie de la logique dans la base : les agrégats sont recalculés par la base elle-même, ce qui garantit la cohérence même en cas d'écriture concurrente.",
       limits:
-        "Pas de gestion de plusieurs années d'évaluation par étudiant ; l'export des résultats reste à ajouter.",
-      links: [{ label: "Code source", href: "https://github.com/rayanerakpo-blip/formasat", external: true }],
+        "Pas de gestion de plusieurs années d'évaluation par étudiant ; l'export des résultats reste à ajouter. Sur l'hébergement mutualisé de la démo, le compte MySQL n'a pas le privilège CREATE TRIGGER : les agrégats sont initialisés à l'import, les cinq triggers restent applicables sur un serveur qui l'autorise.",
+      demo: {
+        url: "https://formasat.wuaze.com",
+        accounts: [
+          ["Administrateur", "admin@formasat.fr", "admin2026"],
+        ],
+      },
+      links: [
+        { label: "Voir la démo en ligne", href: "https://formasat.wuaze.com", external: true },
+        { label: "Code source", href: "https://github.com/rayanerakpo-blip/formasat", external: true },
+      ],
       gallery: [
         ["formasat-admin.jpg", "Tableau de bord admin", "Statistiques agrégées, promotions, professeurs, modules et évaluations."],
         ["formasat-login.jpg", "Connexion admin", "Accès réservé à l'administration pédagogique."],
@@ -309,6 +342,18 @@
           )
           .join("")}</div></div>`
       : "";
+    const demoBlock = p.demo
+      ? `<div class="m-section m-section--demo"><h4>Tester la démo en ligne</h4>
+           <p><a href="${p.demo.url}" target="_blank" rel="noopener">${p.demo.url}</a>${p.demo.version ? ` — ${p.demo.version}` : ""}</p>
+           <ul class="m-accounts">${p.demo.accounts
+             .map(
+               ([role, email, password]) =>
+                 `<li><strong>${role}</strong> : <code>${email}</code> / <code>${password}</code></li>`
+             )
+             .join("")}</ul>
+           <p class="m-hint">Données de démonstration. Les comptes peuvent être réinitialisés.</p>
+         </div>`
+      : "";
 
     modalBody.innerHTML = `
       <div class="m-head">
@@ -323,6 +368,7 @@
       <div class="m-section"><h4>Ce qui a été réalisé</h4><ul>${points}</ul></div>
       <div class="m-section"><h4>Choix techniques</h4><p>${p.choices}</p></div>
       <div class="m-section"><h4>Limites assumées</h4><p>${p.limits}</p></div>
+      ${demoBlock}
       ${links}
     `;
 
