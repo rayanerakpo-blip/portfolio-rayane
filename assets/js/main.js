@@ -149,6 +149,7 @@
       demo: {
         url: "https://tensionwatch.wuaze.com",
         accounts: [["Démonstration", "demo@tensionwatch.local", "demo2026"]],
+        note: "Le compte de démonstration contient un patient fictif et quatre mesures de tension pour explorer le tableau de bord.",
       },
       links: [
         { label: "Voir la démo en ligne", href: "https://tensionwatch.wuaze.com", external: true },
@@ -188,8 +189,8 @@
       limits:
         "Le paiement en ligne est simulé ; il n'y a pas encore de messagerie interne ni de notifications e-mail à chaque changement de statut.",
       demo: {
-        url: "https://fairrepair.wuaze.com",
-        fallback: "https://mifarma.wuaze.com/fairrepair/",
+        url: "https://mifarma.wuaze.com/fairrepair/",
+        pending: "https://fairrepair.wuaze.com",
         accounts: [
           ["Utilisateur", "alice.fournier.27@demo.fairrepair.fr", "Demo@Fair2026"],
           ["Réparateur", "sarah.mercier.0@demo.fairrepair.fr", "Demo@Fair2026"],
@@ -197,8 +198,8 @@
         ],
       },
       links: [
-        { label: "Voir la démo en ligne", href: "https://fairrepair.wuaze.com", external: true },
-        { label: "Démo (lien de secours)", href: "https://mifarma.wuaze.com/fairrepair/", external: true },
+        { label: "Voir la démo en ligne", href: "https://mifarma.wuaze.com/fairrepair/", external: true },
+        { label: "Domaine dédié (en attente de DNS)", href: "https://fairrepair.wuaze.com", external: true },
         { label: "Code source", href: "https://github.com/rayanerakpo-blip/fair-repair", external: true },
       ],
       gallery: [
@@ -347,13 +348,14 @@
     const demoBlock = p.demo
       ? `<div class="m-section m-section--demo"><h4>Tester la démo en ligne</h4>
            <p><a href="${p.demo.url}" target="_blank" rel="noopener">${p.demo.url}</a>${p.demo.version ? ` — ${p.demo.version}` : ""}</p>
-           ${p.demo.fallback ? `<p class="m-hint">Lien de secours (si le DNS n'a pas encore propagé) : <a href="${p.demo.fallback}" target="_blank" rel="noopener">${p.demo.fallback}</a></p>` : ""}
+           ${p.demo.pending ? `<p class="m-hint">Domaine dédié (en attente de propagation DNS) : <a href="${p.demo.pending}" target="_blank" rel="noopener">${p.demo.pending}</a></p>` : ""}
            <ul class="m-accounts">${p.demo.accounts
              .map(
                ([role, email, password]) =>
                  `<li><strong>${role}</strong> : <code>${email}</code> / <code>${password}</code></li>`
              )
              .join("")}</ul>
+           ${p.demo.note ? `<p class="m-hint">${p.demo.note}</p>` : ""}
            <p class="m-hint">Données de démonstration. Les comptes peuvent être réinitialisés.</p>
          </div>`
       : "";

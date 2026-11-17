@@ -164,10 +164,14 @@ affichés dans chaque fiche projet du site.
 
 | Projet | URL | Comptes de démonstration |
 |--------|-----|--------------------------|
-| TensionWatch | <https://tensionwatch.wuaze.com> | `demo@tensionwatch.local` / `demo2026` |
-| Fair'repair | <https://fairrepair.wuaze.com><br>Lien de secours : <https://mifarma.wuaze.com/fairrepair/> | `alice.fournier.27@demo.fairrepair.fr` (client), `sarah.mercier.0@demo.fairrepair.fr` (réparateur), `admin@demo.fairrepair.fr` (admin) / `Demo@Fair2026` |
+| TensionWatch | <https://tensionwatch.wuaze.com> | `demo@tensionwatch.local` / `demo2026` (patient fictif et 4 mesures préchargés) |
+| Fair'repair | <https://mifarma.wuaze.com/fairrepair/> (lien stable)<br>Domaine dédié en attente de propagation DNS : <https://fairrepair.wuaze.com> | `alice.fournier.27@demo.fairrepair.fr` (client), `sarah.mercier.0@demo.fairrepair.fr` (réparateur), `admin@demo.fairrepair.fr` (admin) / `Demo@Fair2026` |
 | Ferme Togo (V2 allégée) | <https://mifarma.wuaze.com> | `proprietaire@laferme.tg` / `admin123`, `collaborateur@laferme.tg` / `collab123` |
 | FormaSat | <https://formasat.wuaze.com> | `admin@formasat.fr` / `admin2026` |
+
+Dernière vérification le 17 novembre 2026 : toutes les URL et tous les comptes ci-dessus
+ont été testés avec succès. Les démos sont protégées contre l'indexation (`robots.txt`
+et en-tête `X-Robots-Tag`) et les fichiers sensibles sont bloqués par `.htaccess`.
 
 Les données hébergées sont des données de démonstration, distinctes des bases locales
 utilisées pour les captures du portfolio. Le compte MySQL d'InfinityFree n'a pas le
