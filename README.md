@@ -59,7 +59,7 @@ les polices sont celles du système. Le site fonctionne donc hors ligne.
 
 | Projet | Versions | Stack | Fiche |
 |--------|----------|-------|-------|
-| **À la une** — TensionWatch (stage Global Needs Institute) | V1 PHP · V2 Java/React | PHP 8, MySQL, Spring Boot 4, React 19, JWT | `tensionwatch` |
+| **À la une** — TensionWatch (stage Global Needs Institute) | V1 PHP · V2 Java/React | PHP 8, MySQL, Spring Boot 3.2, React 19, JWT | `tensionwatch` |
 | **À la une** — LEXILUX (hackathon Assemblée nationale) | — | IA générative, RAG, tests utilisateurs, UX | `lexilux` |
 | **À la une** — Fair'repair | — | PHP 8.2, MySQL, OpenStreetMap | `fairrepair` |
 | Ferme Togo | V1 PHP MVC · V2 PHP allégée · V3 Java/PWA | PHP 8.2, MySQL, Java 25, PWA, i18n | `ferme` |
@@ -69,6 +69,22 @@ les polices sont celles du système. Le site fonctionne donc hors ligne.
 La clé `Fiche` correspond à la valeur de `data-project` dans `index.html` et à l'entrée
 du même nom dans l'objet `data` de `assets/js/main.js`. Les trois premiers sont affichés
 en premier ; les autres restent disponibles dans une liste repliable et via les filtres.
+
+### Dépôts GitHub
+
+| Projet | Dépôt |
+|--------|-------|
+| TensionWatch — V1 PHP | <https://github.com/rayanerakpo-blip/TensionWatch> |
+| TensionWatch — V2 Spring / React | <https://github.com/rayanerakpo-blip/tensionwatch-java-react> |
+| Fair'repair | <https://github.com/rayanerakpo-blip/fair-repair> |
+| Ferme Togo — V1 | <https://github.com/rayanerakpo-blip/ferme-togo> |
+| La Ferme — V2 allégée | <https://github.com/rayanerakpo-blip/la-ferme-togo> |
+| Portail du Togo | <https://github.com/rayanerakpo-blip/portail-du-togo> |
+| FormaSat | <https://github.com/rayanerakpo-blip/formasat> |
+| Portfolio | <https://github.com/rayanerakpo-blip/portfolio-rayane> |
+
+Les liens sont aussi disponibles dans chaque fiche projet, sous « Code source ».
+LEXILUX n'a pas de dépôt public : le prototype a été réalisé en équipe pendant le hackathon.
 
 La section Compétences privilégie les outils mis en pratique et les réalisations qui les
 illustrent, plutôt que des jauges d'auto-évaluation.

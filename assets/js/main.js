@@ -149,7 +149,7 @@
         "Conçue à partir d'une analyse des besoins et de maquettes Figma, une application web PHP/MySQL qui couvre tout le suivi : saisie des mesures, évaluation automatique de la gravité, alertes visuelles, historique graphique, traitements, rappels et export imprimable. Le même besoin a ensuite été repris en API Spring Boot et SPA React.",
       versions: [
         ["V1 — PHP 8 / MySQL", "En ligne", "Application complète déployée sur InfinityFree : Bootstrap 5, Chart.js, PDO, seuils OMS/HAS et export du dossier par impression."],
-        ["V2 — Spring Boot 4 / React 19", "Réécriture", "API REST + SPA TypeScript pour séparer le rendu de la logique et passer à une authentification stateless."],
+        ["V2 — Spring Boot 3.2 / React 19", "Réécriture", "API REST + SPA TypeScript pour séparer le rendu de la logique et passer à une authentification stateless."],
       ],
       points: [
         "Analyse des besoins, conception des parcours utilisateurs et maquettes Figma.",
@@ -160,14 +160,18 @@
         "Export PDF du dossier patient via la feuille d'impression dédiée.",
         "Tests fonctionnels, remontée d'anomalies et documentation technique.",
         "Sécurité : requêtes préparées, hachage des mots de passe, vérification de propriété avant suppression, filtre JWT côté API.",
-        "API REST : 10 contrôleurs, 7 entités JPA et DTO dédiés ; front React avec contexte d'authentification, routes privées et tests React Testing Library.",
-        "Industrialisation de la V2 : Maven Wrapper, Dockerfile et compose.yaml.",
+        "API REST : 9 contrôleurs, 7 entités JPA et DTO dédiés ; front React avec contexte d'authentification, routes privées et test React Testing Library.",
+        "Industrialisation de la V2 : Maven Wrapper, variables d'environnement pour la base et le secret JWT.",
       ],
       choices:
         "Deux implémentations pour deux objectifs. La V1 devait rester déployable sur un hébergement mutualisé gratuit, sans framework, tout en gardant un code lisible. La V2 est une montée en compétence volontaire : comprendre ce que Spring apporte (injection de dépendances, JPA, sécurité déclarative) et ce que React apporte (composants, état, routage).",
       limits:
         "V1 : un utilisateur ne peut suivre qu'un seul patient, le mot de passe oublié n'est pas implémenté et l'export repose sur l'impression navigateur. V2 : pas encore de README racine ni de tests d'intégration back-end, et pas de déploiement en ligne.",
-      links: [{ label: "Voir la démo en ligne", href: "https://tensionwatch.wuaze.com", external: true }],
+      links: [
+        { label: "Voir la démo en ligne", href: "https://tensionwatch.wuaze.com", external: true },
+        { label: "Code V1 (PHP)", href: "https://github.com/rayanerakpo-blip/TensionWatch", external: true },
+        { label: "Code V2 (Spring / React)", href: "https://github.com/rayanerakpo-blip/tensionwatch-java-react", external: true },
+      ],
       gallery: [
         ["tw-dashboard.jpg", "Tableau de bord", "Mesures de la patiente de démonstration, moyenne, tension du jour et dernières valeurs."],
         ["tw-tension.jpg", "Suivi de tension", "Saisie d'une mesure et historique graphique avec repères de gravité."],
@@ -227,7 +231,7 @@
         "Développement sans framework pour maîtriser chaque brique : routage, sessions, autorisations et accès aux données. Le projet est documenté par un support de soutenance et un script de démonstration minuté.",
       limits:
         "Le paiement en ligne est simulé ; il n'y a pas encore de messagerie interne ni de notifications e-mail à chaque changement de statut.",
-      links: [],
+      links: [{ label: "Code source", href: "https://github.com/rayanerakpo-blip/fair-repair", external: true }],
       gallery: [
         ["fairrepair-home.jpg", "Accueil", "Recherche de réparateurs, services et avis sur la page d'accueil."],
         ["fairrepair-carte.jpg", "Carte interactive", "Carte OpenStreetMap des réparateurs référencés."],
@@ -265,7 +269,10 @@
         "Trois réponses à trois contraintes réelles : la V1 privilégie la complétude métier, la V2 la portabilité sur un mutualisé, la V3 l'autonomie sur une machine rurale où seul le JDK est garanti. Dans les trois cas, les règles agronomiques restent déterministes et explicables plutôt qu'un modèle opaque.",
       limits:
         "La V1 couvre 2 des 17 hectares et l'import drone reste un fichier structuré. La V2 laisse de côté le drone et l'observatoire. La V3 calcule un indice de verdeur ExG, pas un NDVI, et son rendu tactile n'a pas pu être testé faute de navigateur.",
-      links: [],
+      links: [
+        { label: "Code V1 (PHP)", href: "https://github.com/rayanerakpo-blip/ferme-togo", external: true },
+        { label: "Code V2 (PHP allégée)", href: "https://github.com/rayanerakpo-blip/la-ferme-togo", external: true },
+      ],
       gallery: [
         ["ferme-dashboard.jpg", "Tableau de bord — V1", "Cultures en cours, tâches, parcelles et indicateurs financiers."],
         ["ferme-cultures.jpg", "Cultures — V1", "Parcelles, semis, stades et interventions culturales."],
@@ -306,7 +313,7 @@
         "PHP sans framework pour rester portable, mais avec une vraie exigence de qualité front : identité visuelle du Togo en SVG, feuille d'impression dédiée, compression et cache via .htaccess.",
       limits:
         "Les données de démarches sont des données de démonstration ; le portail n'est pas rattaché à une source officielle.",
-      links: [],
+      links: [{ label: "Code source", href: "https://github.com/rayanerakpo-blip/portail-du-togo", external: true }],
       gallery: [
         ["togo-home.jpg", "Accueil", "Recherche globale et accès aux démarches les plus consultées."],
         ["togo-demarches.jpg", "Démarches", "Liste filtrable des démarches administratives."],
@@ -337,7 +344,7 @@
         "Le choix fort du projet est de déporter une partie de la logique dans la base : les agrégats sont recalculés par la base elle-même, ce qui garantit la cohérence même en cas d'écriture concurrente.",
       limits:
         "Pas de gestion de plusieurs années d'évaluation par étudiant ; l'export des résultats reste à ajouter.",
-      links: [],
+      links: [{ label: "Code source", href: "https://github.com/rayanerakpo-blip/formasat", external: true }],
       gallery: [
         ["formasat-admin.jpg", "Tableau de bord admin", "Statistiques agrégées, promotions, professeurs, modules et évaluations."],
         ["formasat-login.jpg", "Connexion admin", "Accès réservé à l'administration pédagogique."],
